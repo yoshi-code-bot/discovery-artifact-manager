@@ -1,9 +1,7 @@
 {
-  "kind": "discovery#restDescription",
-  "title": "Display & Video 360 API",
-  "rootUrl": "https://displayvideo.googleapis.com/",
-  "revision": "20240118",
-  "documentationLink": "https://developers.google.com/display-video/",
+  "ownerName": "Google",
+  "id": "displayvideo:v1",
+  "name": "displayvideo",
   "resources": {
     "advertisers": {
       "methods": {
@@ -8037,9 +8035,14 @@
       }
     }
   },
-  "ownerName": "Google",
-  "protocol": "rest",
   "discoveryVersion": "v1",
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
+  "version": "v1",
+  "version_module": true,
+  "servicePath": "",
   "parameters": {
     "access_token": {
       "type": "string",
@@ -8117,8 +8120,10 @@
       "location": "query"
     }
   },
-  "servicePath": "",
-  "version_module": true,
+  "protocol": "rest",
+  "kind": "discovery#restDescription",
+  "title": "Display & Video 360 API",
+  "canonicalName": "Display Video",
   "schemas": {
     "AssignedTargetingOption": {
       "id": "AssignedTargetingOption",
@@ -11014,6 +11019,15 @@
           "description": "Required. Immutable. ID of the CM360 Floodlight configuration linked with the DV360 advertiser.",
           "type": "string",
           "format": "int64"
+        },
+        "cmAdvertiserIds": {
+          "description": "Output only. The set of CM360 Advertiser IDs sharing the CM360 Floodlight configuration.",
+          "readOnly": true,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "int64"
+          }
         },
         "cmSyncableSiteIds": {
           "description": "A list of CM360 sites whose placements will be synced to DV360 as creatives. If absent or empty in CreateAdvertiser method, the system will automatically create a CM360 site. Removing sites from this list may cause DV360 creatives synced from CM360 to be deleted. At least one site must be specified.",
@@ -18803,14 +18817,6 @@
       }
     }
   },
-  "batchPath": "batch",
-  "mtlsRootUrl": "https://displayvideo.mtls.googleapis.com/",
-  "name": "displayvideo",
-  "basePath": "",
-  "id": "displayvideo:v1",
-  "fullyEncodeReservedExpansion": true,
-  "canonicalName": "Display Video",
-  "ownerDomain": "google.com",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -18830,10 +18836,13 @@
     }
   },
   "baseUrl": "https://displayvideo.googleapis.com/",
+  "ownerDomain": "google.com",
+  "fullyEncodeReservedExpansion": true,
   "description": "Display & Video 360 API allows users to automate complex Display & Video 360 workflows, such as creating insertion orders and setting targeting options for individual line items.",
-  "version": "v1",
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
-  }
+  "batchPath": "batch",
+  "mtlsRootUrl": "https://displayvideo.mtls.googleapis.com/",
+  "rootUrl": "https://displayvideo.googleapis.com/",
+  "revision": "20240125",
+  "basePath": "",
+  "documentationLink": "https://developers.google.com/display-video/"
 }
